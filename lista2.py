@@ -29,4 +29,20 @@ def alturas_e_idades():
         print(f'idade da pessoa {5-c}: {array_idade[c]}')
         print(f'altura da pessoa {5-c}: {array_altura[c]}')
 
-alturas_e_idades()
+def soma_dos_quadrados(l):
+    #for loop normal
+    acumulador = 0
+    for item in l:
+        quadrado = item * item
+        acumulador += quadrado
+    print(f' <for loop> A soma dos quadrados dos elementos da estrutura é {acumulador}')
+
+    #list comprehension
+    a = sum([item * item for item in l])
+    print(f'<list comprehension> A soma dos quadrados dos elementos da estrutura é {a}')
+
+    #map
+    b = sum(map(lambda n : n*n, l))
+    print(f'<lambda + map> A soma dos quadrados dos elementos da estrutura é {b}')
+
+soma_dos_quadrados([2,4,6])
