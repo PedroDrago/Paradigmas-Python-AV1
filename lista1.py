@@ -48,6 +48,12 @@ def tinta_galoes_latas(area):
     print(f'com uma área de {area} metros quadrados você pode comprar: ')
     print(f'{quantidade_de_latas} latas de tinta')
     print(f'ou {quantidade_de_galoes} galões de tinta')
-    print(f'ou {} latas de tinta e {} galões de tinta')
+    print(f'ou latas de tinta e galões de tinta')
 
-tinta_galoes_latas(200)
+def tempo_download(tamanho, velocidade):
+    velocidade_segundos = tamanho / velocidade
+    velocidade_minutos = velocidade_segundos / 60
+
+    print(f'O download do arquivo de tamanho {tamanho} MB demorará {velocidade_minutos:.2f} minutos.')
+
+tempo_download(1024, 10)
