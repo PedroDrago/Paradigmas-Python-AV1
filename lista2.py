@@ -1,6 +1,3 @@
-from operator import length_hint
-
-
 def caixa_eletronico():
     return 0
 
