@@ -30,11 +30,24 @@ def salario(salario_por_hora, horas_trabalhadas):
     print(f'Sindicato: - R$ {sindicato}')
     print(f'Salário liquido = R$ {salario_liquido}')
 
-def tinta(area):
+def tinta_latas(area):
     quantidade_de_litros = area / 3
     quantidade_de_latas = math.ceil(quantidade_de_litros / 18)
     preco = quantidade_de_latas * 80.00
 
     print(f'Com uma área de {area} metros quadrados, você deve comprar {quantidade_de_latas} latas de tinta, que custará R$ {preco:.2f}')
 
-tinta(100)
+def tinta_galoes_latas(area):
+    quantidade_de_litros = area / 6
+    quantidade_de_latas = math.ceil(quantidade_de_litros / 18)
+    quantidade_de_galoes = math.ceil(quantidade_de_litros / 3.6)
+    
+    #mista
+    
+
+    print(f'com uma área de {area} metros quadrados você pode comprar: ')
+    print(f'{quantidade_de_latas} latas de tinta')
+    print(f'ou {quantidade_de_galoes} galões de tinta')
+    print(f'ou {} latas de tinta e {} galões de tinta')
+
+tinta_galoes_latas(200)
