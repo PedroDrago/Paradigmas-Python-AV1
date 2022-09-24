@@ -1,3 +1,6 @@
+from operator import length_hint
+
+
 def caixa_eletronico():
     return 0
 
@@ -45,4 +48,12 @@ def soma_dos_quadrados(l):
     b = sum(map(lambda n : n*n, l))
     print(f'<lambda + map> A soma dos quadrados dos elementos da estrutura é {b}')
 
-soma_dos_quadrados([2,4,6])
+def array_intercalado(l1, l2):
+    l3 = []
+    for c in range(len(l1)):
+        l3.append(l1[c])
+        l3.append(l2[c])
+    
+    print(l3)
+
+array_intercalado([1,3,5,7,9,11,13,15,17,19], [2,4,6,8,10,12,14,16,18,20])
