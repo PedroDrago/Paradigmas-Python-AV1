@@ -16,4 +16,17 @@ def valor_multa(peso):
         multa = int(excesso) * 4.00
         print(f'O valor da multa para um excesso de {excesso:.1f} Kg é de R${multa}')
 
-valor_multa(70)
+def salario(salario_por_hora, horas_trabalhadas):
+    salario_bruto = salario_por_hora * horas_trabalhadas
+    imposto_de_renda = (salario_bruto * 0.11)
+    inss = (salario_bruto * 0.08)
+    sindicato =(salario_bruto * 0.05)
+    descontos = imposto_de_renda + inss + sindicato
+    salario_liquido = salario_bruto - descontos
+    print(f'Salário bruto: + R$ {salario_bruto}')
+    print(f'Imposto de renda: - R$ {imposto_de_renda}')
+    print(f'INSS: - R$ {inss}')
+    print(f'Sindicato: - R$ {sindicato}')
+    print(f'Salário liquido = R$ {salario_liquido}')
+
+salario(10, 10)
