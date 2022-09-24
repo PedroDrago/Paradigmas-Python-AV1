@@ -1,3 +1,4 @@
+import math
 #1.
 def peso_ideal(h):
     peso_ideal_masc = (72.7 * h) - 58
@@ -29,4 +30,11 @@ def salario(salario_por_hora, horas_trabalhadas):
     print(f'Sindicato: - R$ {sindicato}')
     print(f'Salário liquido = R$ {salario_liquido}')
 
-salario(10, 10)
+def tinta(area):
+    quantidade_de_litros = area / 3
+    quantidade_de_latas = math.ceil(quantidade_de_litros / 18)
+    preco = quantidade_de_latas * 80.00
+
+    print(f'Com uma área de {area} metros quadrados, você deve comprar {quantidade_de_latas} latas de tinta, que custará R$ {preco:.2f}')
+
+tinta(100)
