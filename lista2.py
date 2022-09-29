@@ -1,3 +1,4 @@
+#1
 def caixa_eletronico(quantia):
     if quantia >= 10 or quantia <= 600:
         cem = int(quantia/100)
@@ -31,13 +32,13 @@ def caixa_eletronico(quantia):
          print(f'{um} nota(s) de um')
     else:
         print('A quantia deve ser de pelo menos 10 reais e de no maximo 600 reais.')
-
+#2
 def par_ou_impar(n):
     if n%2 == 0:
         print(f'{n} é um numero par')
     else:
         print(f'{n} é um numero ímpar')
-
+#3
 def inteiro_ou_decimal(n):
     if type(n) == int:
         print(f'{n} é um numero inteiro')
@@ -45,7 +46,7 @@ def inteiro_ou_decimal(n):
         print(f'{n} é um numero decimal')
     else:
         print(f'{n} não é um numero')
-
+#4
 def alturas_e_idades():
     array_altura = []
     array_idade = []
@@ -59,7 +60,7 @@ def alturas_e_idades():
     for c in range(5):
         print(f'idade da pessoa {5-c}: {array_idade[c]}')
         print(f'altura da pessoa {5-c}: {array_altura[c]}')
-
+#5
 def soma_dos_quadrados(l):
     #for loop normal
     acumulador = 0
@@ -76,10 +77,12 @@ def soma_dos_quadrados(l):
     b = sum(map(lambda n : n*n, l))
     print(f'<lambda + map> A soma dos quadrados dos elementos da estrutura é {b}')
 
+soma_dos_quadrados([5, 6])
+#6
 def array_intercalado(l1, l2):
+    menor = l2 if l1 > l2 else l1
     l3 = []
-    for c in range(len(l1)):
+    for c in range(len(menor)):
         l3.append(l1[c])
         l3.append(l2[c])
-    
     print(l3)
