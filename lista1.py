@@ -38,17 +38,19 @@ def tinta_latas(area):
     print(f'Com uma área de {area} metros quadrados, você deve comprar {quantidade_de_latas} latas de tinta, que custará R$ {preco:.2f}')
 
 def tinta_galoes_latas(area):
-    quantidade_de_litros = area / 6
-    quantidade_de_latas = math.ceil(quantidade_de_litros / 18)
-    quantidade_de_galoes = math.ceil(quantidade_de_litros / 3.6)
-    
-    #mista
-    
+    litros_necessarios = area/6
+    apenas_latas = math.ceil(litros_necessarios/18)
+    apenas_galoes = math.ceil(litros_necessarios/3.6)
 
-    print(f'com uma área de {area} metros quadrados você pode comprar: ')
-    print(f'{quantidade_de_latas} latas de tinta')
-    print(f'ou {quantidade_de_galoes} galões de tinta')
-    print(f'ou latas de tinta e galões de tinta')
+    latas = int(litros_necessarios/18)
+    litros_necessarios = litros_necessarios%18
+    galoes = math.ceil(litros_necessarios/3.6)
+
+    preco_misto = (latas * 80.0) + (galoes * 25.0)
+
+    print(f'Em caso de compra mista compre: {latas} latas e {galoes} galoes, por {preco_misto:.2f}')
+    print(f'Em caso de apenas latas compre: {apenas_latas} latas por {(apenas_latas * 80.0):.2f}')
+    print(f'Em caso de apenas galoes compre: {apenas_galoes} galoes por {(apenas_galoes * 25.0):.2f}')
 
 def tempo_download(tamanho, velocidade):
     velocidade_segundos = tamanho / velocidade
@@ -56,4 +58,3 @@ def tempo_download(tamanho, velocidade):
 
     print(f'O download do arquivo de tamanho {tamanho} MB demorará {velocidade_minutos:.2f} minutos.')
 
-tempo_download(1024, 10)
