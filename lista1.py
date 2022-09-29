@@ -6,7 +6,7 @@ def peso_ideal(h):
 
     print(f'Caso homem, o peso ideal para a altura {h} é {peso_ideal_masc:.2f}')
     print(f'Caso mulher, o peso ideal para a altura {h} é {peso_ideal_fem:.2f}')
-
+#2
 def valor_multa(peso):
     if peso < 50:
         print('Não há excesso, logo, não há multa para caulcular.')
@@ -16,7 +16,7 @@ def valor_multa(peso):
         #se deixasse sem, o valor de 60.0 kg e 60.2 kg seria diferente, e nao deveria, ja que so se paga a cada kilo a mais
         multa = int(excesso) * 4.00
         print(f'O valor da multa para um excesso de {excesso:.1f} Kg é de R${multa}')
-
+#3
 def salario(salario_por_hora, horas_trabalhadas):
     salario_bruto = salario_por_hora * horas_trabalhadas
     imposto_de_renda = (salario_bruto * 0.11)
@@ -29,7 +29,7 @@ def salario(salario_por_hora, horas_trabalhadas):
     print(f'INSS: - R$ {inss}')
     print(f'Sindicato: - R$ {sindicato}')
     print(f'Salário liquido = R$ {salario_liquido}')
-
+#4
 def tinta_latas(area):
     quantidade_de_litros = area / 3
     quantidade_de_latas = math.ceil(quantidade_de_litros / 18)
@@ -37,6 +37,7 @@ def tinta_latas(area):
 
     print(f'Com uma área de {area} metros quadrados, você deve comprar {quantidade_de_latas} latas de tinta, que custará R$ {preco:.2f}')
 
+#5
 def tinta_galoes_latas(area):
     litros_necessarios = area/6
     apenas_latas = math.ceil(litros_necessarios/18)
@@ -52,8 +53,10 @@ def tinta_galoes_latas(area):
     print(f'Em caso de apenas latas compre: {apenas_latas} latas por {(apenas_latas * 80.0):.2f}')
     print(f'Em caso de apenas galoes compre: {apenas_galoes} galoes por {(apenas_galoes * 25.0):.2f}')
 
+#6
 def tempo_download(tamanho, velocidade):
-    velocidade_segundos = tamanho / velocidade
+    tamanho_megabits = tamanho * 8
+    velocidade_segundos = tamanho_megabits / velocidade
     velocidade_minutos = velocidade_segundos / 60
 
     print(f'O download do arquivo de tamanho {tamanho} MB demorará {velocidade_minutos:.2f} minutos.')
